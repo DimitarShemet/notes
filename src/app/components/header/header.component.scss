@@ -1,0 +1,14 @@
+header {
+  width: 100%;
+  height: 50px;
+  background-color: aqua;
+  border: 4px solid black;
+  border-bottom: none;
+  display: flex;
+}
+span {
+  font-weight: 700;
+  font-size: 32px;
+  align-self: center;
+  margin-left: 10px;
+}
