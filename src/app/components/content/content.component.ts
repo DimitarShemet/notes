@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { loadCurrentNote } from 'src/store/actions/notes.actions';
@@ -10,7 +10,7 @@ import { take } from 'rxjs/operators';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
 })
-export class ContentComponent {
+export class ContentComponent implements OnInit {
   note$ = this.store.select(selectNote);
 
   constructor(private store: Store, private route: ActivatedRoute) {}
