@@ -10,10 +10,11 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  constructor(private store: Store, private formBuilder: FormBuilder) {}
   $notes = this.store.select(selectNotes);
   newNoteForm: FormGroup | undefined;
   modalIsOpened: boolean = false;
+
+  constructor(private store: Store, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.initForm();
